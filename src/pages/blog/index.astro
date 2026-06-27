@@ -2,22 +2,24 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="博客" currentPage="blog">
+<Layout title="博客文章" currentPage="blog">
   <h1 class="page-title">📝 博客文章</h1>
   <p class="page-description">技术笔记、生活感悟、折腾记录</p>
 
-  <div class="placeholder">
-    <div class="placeholder-icon">✍️</div>
-    <h3>还没有文章</h3>
-    <p>第一篇博客正在酝酿中...</p>
+  <div class="list-section">
+    <h2>最新文章</h2>
+    
+    <a href="/blog/first-post/" class="list-item">
+      <div>
+        <span class="date">2026-06-27</span>
+        <h3>从零开始，用 Astro 搭建我的 GitHub Pages 个人网站</h3>
+        <p>记录一下今天从零开始，用 Astro 框架搭建 GitHub Pages 个人网站的全过程，包括技术选型、遇到的坑、以及最终的成果。</p>
+      </div>
+    </a>
   </div>
 
   <div class="list-section" style="margin-top: 3rem;">
     <h2>📌 想写的主题</h2>
-    <div class="list-item">
-      <h3>Astro 搭建 GitHub Pages 教程</h3>
-      <p>从零开始用 Astro 搭建个人网站的完整记录</p>
-    </div>
     <div class="list-item">
       <h3>网页小游戏开发笔记</h3>
       <p>用 Canvas 做小游戏的经验分享</p>
@@ -26,5 +28,36 @@ import Layout from '../../layouts/Layout.astro';
       <h3>AI 工具使用心得</h3>
       <p>各种 AI 工具的折腾和实用技巧</p>
     </div>
+    <div class="list-item">
+      <h3>电子电路折腾记录</h3>
+      <p>PNP、IGBT 这些玩意儿的调试笔记</p>
+    </div>
   </div>
 </Layout>
+
+<style>
+  .list-item {
+    display: block;
+    color: var(--text-color);
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--card-border);
+    transition: all 0.2s;
+  }
+  
+  .list-item:hover {
+    color: var(--primary-color);
+    padding-left: 0.5rem;
+  }
+  
+  .list-item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+  }
+  
+  .list-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+</style>

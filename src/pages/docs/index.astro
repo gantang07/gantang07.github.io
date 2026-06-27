@@ -6,10 +6,15 @@ import Layout from '../../layouts/Layout.astro';
   <h1 class="page-title">📚 技术文档</h1>
   <p class="page-description">一些项目的文档和教程</p>
 
-  <div class="placeholder">
-    <div class="placeholder-icon">📖</div>
-    <h3>文档整理中...</h3>
-    <p>正在把各种笔记整理成结构化的文档</p>
+  <div class="list-section">
+    <h2>全部文档</h2>
+    
+    <a href="/docs/astro-tutorial/" class="list-item">
+      <div>
+        <h3>从零开始搭建 GitHub Pages 个人网站（小白教程）</h3>
+        <p>超详细的小白教程，完全不懂代码也能跟着做，从零开始搭建一个属于你自己的个人网站，免费托管在 GitHub Pages 上。</p>
+      </div>
+    </a>
   </div>
 
   <div class="list-section" style="margin-top: 3rem;">
@@ -19,8 +24,8 @@ import Layout from '../../layouts/Layout.astro';
       <p>Astro 框架的入门教程和最佳实践</p>
     </div>
     <div class="list-item">
-      <h3>GitHub Pages 部署手册</h3>
-      <p>静态网站部署到 GitHub Pages 的完整流程</p>
+      <h3>网页小游戏开发教程</h3>
+      <p>用 Canvas 做网页小游戏的入门教程</p>
     </div>
     <div class="list-item">
       <h3>前端开发工具箱</h3>
@@ -28,3 +33,30 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
 </Layout>
+
+<style>
+  .list-item {
+    display: block;
+    color: var(--text-color);
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--card-border);
+    transition: all 0.2s;
+  }
+  
+  .list-item:hover {
+    color: var(--primary-color);
+    padding-left: 0.5rem;
+  }
+  
+  .list-item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+  }
+  
+  .list-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+</style>
