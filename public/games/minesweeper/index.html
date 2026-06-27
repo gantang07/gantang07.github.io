@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>扫雷小游戏</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <h1>💣 扫雷</h1>
+      <div class="difficulty-selector">
+        <button class="diff-btn active" data-diff="easy">初级</button>
+        <button class="diff-btn" data-diff="medium">中级</button>
+        <button class="diff-btn" data-diff="hard">高级</button>
+      </div>
+    </div>
+
+    <div class="game-info">
+      <div class="info-item">
+        <span class="info-label">💣 剩余地雷</span>
+        <span id="mine-count" class="info-value">10</span>
+      </div>
+      <button id="reset-btn" class="reset-btn">😊</button>
+      <div class="info-item">
+        <span class="info-label">⏱️ 时间</span>
+        <span id="timer" class="info-value">000</span>
+      </div>
+    </div>
+
+    <div id="game-board" class="game-board">
+      <!-- 游戏格子会通过 JS 生成 -->
+    </div>
+
+    <div class="game-tips">
+      <p>🖱️ 左键：翻开格子 | 右键：标记/取消地雷</p>
+    </div>
+  </div>
+
+  <div id="game-over-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modal-title">游戏结束</h2>
+      <p id="modal-message">再接再厉！</p>
+      <button id="play-again-btn" class="play-again-btn">再来一局</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
