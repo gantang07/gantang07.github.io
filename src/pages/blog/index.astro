@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="博客" currentPage="blog">
+  <h1 class="page-title">📝 博客文章</h1>
+  <p class="page-description">技术笔记、生活感悟、折腾记录</p>
+
+  <div class="placeholder">
+    <div class="placeholder-icon">✍️</div>
+    <h3>还没有文章</h3>
+    <p>第一篇博客正在酝酿中...</p>
+  </div>
+
+  <div class="list-section" style="margin-top: 3rem;">
+    <h2>📌 想写的主题</h2>
+    <div class="list-item">
+      <h3>Astro 搭建 GitHub Pages 教程</h3>
+      <p>从零开始用 Astro 搭建个人网站的完整记录</p>
+    </div>
+    <div class="list-item">
+      <h3>网页小游戏开发笔记</h3>
+      <p>用 Canvas 做小游戏的经验分享</p>
+    </div>
+    <div class="list-item">
+      <h3>AI 工具使用心得</h3>
+      <p>各种 AI 工具的折腾和实用技巧</p>
+    </div>
+  </div>
+</Layout>

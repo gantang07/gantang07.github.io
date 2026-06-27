@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="首页" currentPage="home">
+  <section class="hero">
+    <h1>欢迎来到我的小站 👋</h1>
+    <p>这里有我做的小游戏、写的博客、技术文档，还有正在创作的小说。随便逛逛吧～</p>
+  </section>
+
+  <div class="card-grid">
+    <a href="/games/" class="card">
+      <div class="card-icon">🎮</div>
+      <h3>网页小游戏</h3>
+      <p>我做的一些有趣的网页小游戏，打开就能玩，不用下载。</p>
+    </a>
+
+    <a href="/blog/" class="card">
+      <div class="card-icon">📝</div>
+      <h3>博客文章</h3>
+      <p>技术笔记、生活感悟、折腾记录，想到啥写啥。</p>
+    </a>
+
+    <a href="/docs/" class="card">
+      <div class="card-icon">📚</div>
+      <h3>技术文档</h3>
+      <p>一些项目的文档和教程，方便自己也方便大家查阅。</p>
+    </a>
+
+    <a href="/novels/" class="card">
+      <div class="card-icon">📖</div>
+      <h3>小说创作</h3>
+      <p>正在写的小说，慢慢更新中，欢迎追更。</p>
+    </a>
+  </div>
+</Layout>

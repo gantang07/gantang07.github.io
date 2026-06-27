@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+
+const { title, currentPage = 'home' } = Astro.props;
+const siteTitle = 'gantang07 的小站';
+const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{fullTitle}</title>
+    <meta name="description" content="gantang07 的个人网站，包含游戏、博客、技术文档和小说" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Navbar currentPage={currentPage} />
+    <main class="main-content">
+      <slot />
+    </main>
+    <footer class="footer">
+      <p>© {new Date().getFullYear()} gantang07 · Powered by Astro & GitHub Pages</p>
+    </footer>
+  </body>
+</html>
